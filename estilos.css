@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
+@font-face {
+    font-family: "cocogoose";
+    src: url(./fonts/Cocogoose\ Pro-trial.ttf);
+}
+@font-face {
+    font-family: "cocogoose-italic";
+    src: url(./fonts/Cocogoose\ Pro\ Italic-trial.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+body{
+    background-color: #37A3A5;
+    color: white;
+    font-family: "cocogoose";
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+
+/* -----------------  HEADER  -------------  */
+.header{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    padding: 20px 4%;
+}
+@media only screen and (max-width: 900px){
+    .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-categorias{
+        flex-direction: column;
+    }
+}
+.header-logo{
+    width: 10%;  
+}
+@media only screen and (max-width: 900px){
+    .header-logo{
+        width: 30%; 
+        min-width: 150px; 
+    }
+}
+.logo-navbar{
+    width: 100%;
+}
+.header-categorias{
+    display: flex;
+    font-size: 25px;
+    align-items: center;
+    height: 50%;
+}
+.header-categoria{
+    margin: 10px;
+    transition-duration: .3s;
+    cursor: pointer;
+    color: white;
+}
+.header-categoria:hover{
+    transform: scale(1.1);
+    color: #80ed99;
+}
+
+
+
+/* -----------------  BANNER  -------------  */
+.banner{
+    padding: 25px 10%;
+    font-size: 3vw;
+    display: flex;
+    justify-content: center;
+}
+@media only screen and (max-width: 900px){
+    .banner{
+        font-size: 25px;
+    }
+}
+/* -------------------------- SERVICIOS ------------------------- */
+
+.servicios{
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    font-family: "cocogoose-italic";
+    padding: 4vh 10vh;
+}
+.servicios-item{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 4vh 0vh;
+}
+.servicios-item-titulo{
+    padding-bottom: 2vh;
+    font-size: 27px;
+}
+
+/* -------------------------- CATÁLOGO ------------------------- */
+
+.catalogo-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 23px;
+    padding: 20vh;
+    background-image: url(./multimedia/logo-verde-2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+@media only screen and (max-width: 900px){
+    .catalogo-container{
+        padding: 10vh;
+    }
+}
+
+.catalogo-body-top{
+    padding-bottom: 10vh;
+}
+.catalogo-body-bot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@media only screen and (max-width: 900px){
+    .catalogo-body-bot{
+        flex-direction: column;
+    }
+}
+.catalogo-link-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.catalogo-link-container:hover .catalogo-link-decoracion{
+    top: 5px;
+    left: 5px;
+}
+.catalogo-link{
+    background-color: #007d80;
+    padding: 15px;
+    color:  white;
+    text-decoration: none;
+}
+.catalogo-link-decoracion{
+    position: absolute;
+    background-color: #80ed99;
+    top: 0px;
+    left: 0px;
+    transition-duration: 0.1s;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    z-index: -1;
+}
+
+/* -------------------------- CONTACTO ------------------------- */
+.contacto-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px 0px;
+    justify-content: center;
+}
+.contacto-redes{
+    display: flex;
+    padding: 20px 100px;
+    background-color:#007d80 ;
+    flex-direction: column;
+    width: 40%;
+}
+.contacto-redes-link{
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0px;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration:none;
+}
+.contacto-redes-icono{
+    height: 60px;
+}
+.contacto-redes-nombre{
+    color: white;
+    font-size: 23px;
+}
+.contacto-redes-nombre-telefono{
+    color: white;
+    font-size: 23px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+@media only screen and (max-width: 900px){
+    .contacto-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contacto-redes{
+        width: 70%;
+        padding: 20px 20px;
+    }
+}
+
+/* -------------------------- CONTACTO-MAPA ------------------------- */
+.contacto-mapa{
+    width: 40%;
+    background-color:#007d80 ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 900px){
+    .contacto-mapa{
+        width: 70%;
+    }
+}
+.mapouter{
+    position:relative;
+    text-align:right;
+    height:90%;
+    width:90%;
+}
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    height:100%;
+    width:100%;
+}
